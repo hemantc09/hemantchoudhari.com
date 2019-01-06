@@ -1,0 +1,268 @@
+/* 
+background color-main: #f2f3f3
+text-color: #727272
+margin: t r l b;
+*/
+
+
+/*--------------------*/
+/*-----Basic Setup----*/
+/*--------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color: #f2f3f3;
+    color: #727272;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    /*helps to render in perfect way*/
+    text-rendering: optimizeLegibility; 
+    /*whatever overflow will get hidden .e.g. if there is extra scroll bar then its overlfowing*/
+    overflow-x: hidden;  
+}
+
+
+/*--------------------*/
+/*-----Re-usable Components----*/
+/*--------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0px auto;
+    display: block;
+}
+
+h1 {
+    font-weight: 300;
+}
+h2 {
+    font-weight: 300;
+    color: #2f2e2e;
+}
+h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #292929;
+    font-size: 250%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    
+}
+
+h2 {
+    font-size: 180%;
+    letter-spacing: 1px;
+}
+
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.btn-medium {
+    text-align: center;
+    border-top: 2px solid #d53ab1;
+    border-bottom: 2px solid  #ff973e ;
+    -webkit-box-sizing: border-box;
+    font-size: 65%;
+    color: #ff69b4;;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: 2px 100%;
+    -moz-background-size: 2px 100%;
+    background-size: 2px 100%;
+    background-image: -webkit-linear-gradient(top, #d53ab1 0%, #ff973e 100%), -webkit-linear-gradient(top, #d53ab1 0%, #ff973e 100%);
+    background-image: linear-gradient(to bottom, #d53ab1 0%, #ff973e 100%), linear-gradient(to bottom, #d53ab1 0%, #ff973e 100%); 
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    text-align: center;
+    border: 1px;
+    font-size: 85%;
+    margin-left: 5px;
+    color: #fff;
+    background-image: linear-gradient(to right,  #d53ab1 0%, #ee9af5 51%, #ff973e 100%);
+}
+
+
+select {
+    width: auto;
+    height: 30px;
+    padding: 7px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+select , option {
+    font-size: 13px;
+}
+/*--------------------*/
+/*-----Paragraphs ----*/
+/*--------------------*/
+
+
+.long-copy{
+	display: inline-block;
+    line-height: 145%;
+    width: 70%;
+    font-size: 80%;
+    
+}
+
+/*--------------------*/
+/*-----Header----*/
+/*--------------------*/
+
+
+.logo {
+    height: 60px;
+    width: auto;
+    float: left;
+    margin-top: 40px;
+}
+
+/*--------------------*/
+/*-----Main-nav----*/
+/*--------------------*/
+
+.main-nav,
+.main-nav-profile {
+    float: left;
+    list-style: none;
+    margin-top: 60px;
+    margin-left: 10px
+	z-index: 1000;
+}
+
+.main-nav li,
+.main-nav-profile li {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited,
+.main-nav-profile li a:link,
+.main-nav-profile li a:visited {
+    padding: 8px 0px;
+    color: #727272;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 75%;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active,
+.main-nav-profile li a:hover,
+.main-nav-profile li a:active{
+    color: #434242;
+}
+
+.ion-icon-element,
+.mobile-nav-icon {
+    color: #454545;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.main-profile-ul {
+    float: right;
+}
+
+/*--------------------*/
+/*-----Feature Section ----*/
+/*--------------------*/
+
+
+.mobile-nav-icon {
+	display: none;
+	margin-right: 55px;
+	margin-left: 30px;
+}
+
+/*--------------------*/
+/*-----Feature Section ----*/
+/*--------------------*/
+
+.feature{
+    background-image: url(img/background-tulip-min.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.feature-text-box {
+    position: relative;
+    width: 750px;
+    top: 50%;
+    left: 35%;
+    /*translate the width half of the width and half of the height*/
+    transform: translate(-40%,-50%);
+    padding: 80px 0;
+}
+
+.location-box {
+    display: inline-block;
+    margin-left: 15%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+    padding: 10px; 
+}
+
+
+.ion-star {
+    color: rgb(232, 205, 0);
+}
+.ion-star-blank {
+/*    color: #cbcbcb;*/
+	color: #727272;
+}
+.select-location{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.review {
+    font-size: 80%;
+}
+
+.ion-pin {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+
+.price-box {
+	background-color:  #fff;
+	max-width: 65%;
+    padding: 20px;
+}
+
+.price {
+	display: inline-block;
+    padding: 3%;
+    margin-left: 20px;
+}
+
+

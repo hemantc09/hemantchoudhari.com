@@ -1,0 +1,86 @@
+
+/*Title: Color Game Project
+Technology: HTML, CSS, JS
+programmer: Hemant Choudhari
+email: hemantc09@gmail.com
+file: colorGame.css*/
+
+body{
+	background-color: #212323;
+	margin: 0; /*remove the top padding for the h1*/
+	font-family: "Montserrat", "Avenir"; /*two font side by side if the one doesnt work*/
+
+}
+
+.square{
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float:left;
+	margin: 1.66%;
+	border-radius: 30%;
+	transition: background 0.6s;  /* only background target and make it 0.6s for effect*/
+	--webkit-transition: background 0.6s; /*for browser friendly*/
+	-moz-transition:background 0.6s; /*for mozila*/
+}
+
+
+
+#container{  /*its a id thats why there is #*/
+	margin: 20px auto; /*20 left and right and auto on top and bottom center the elements*/
+	max-width: 600px;
+
+}
+h1{
+	color: white;
+	text-align: center;
+	line-height: 1.1;
+	background-color: steelblue;
+	margin : 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#stripe{
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+.selected{
+	color: white;
+	background-color: steelblue;
+}
+
+#colorDisplay{
+	font-size: 200%;
+}
+
+#message{
+	display: inline-block; 
+	width: 20%;
+	font-weight: bold;
+}
+
+button{
+	border: none; 
+	background: none; /* remove the button background*/
+	text-transform: uppercase;
+	height: 100%;  /*button takes the 100% of the div*/
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit; /* get the font size inherit form body*/
+	transition: all 0.3s;  /* how to animate 2 argument 'all'- all  '2.0s' - seconds*/
+	--webkit-transition: all 0.3s; /*for browser friendly*/
+	-moz-transition: all 0.3s; /*for mozila*/
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background-color: steelblue;
+}

@@ -1,0 +1,792 @@
+/*
+notes:
+color main: #e67e22  //orange
+*/
+
+
+/*------------------------------------*/
+/*Basic setup - sections comment*/ 
+/*------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'lato','Arial',sans-serif;
+    font-weight: 300;
+    /*main font size*/
+    font-size: 20px; 
+    /*helps to render in perfect way*/
+    text-rendering: optimizeLegibility; 
+    /*whatever overflow will get hidden .e.g. if there is extra scroll bar then its overlfowing*/
+    overflow-x: hidden;
+}
+
+/*clear fix will add the margin between the h2 and the section.This is a fix*/
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*------------------------------------*/
+/*Re-usable COMPONENTS*/
+/*------------------------------------*/
+
+/*This row will be always centered - reusable*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box{
+   padding: 1%; 
+}
+
+section {
+    padding: 80px 0;
+}
+
+/*These are the headings*/
+h1,
+h2,
+h3 {  
+    /*this will set the 200% of the main font size which will come to 20 [main size which we set]+20[200%] = 40px*/
+    font-weight: 300;
+    text-transform: uppercase;
+    
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 200%;
+    word-spacing:4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display:block;
+    height: 2px;
+    background-color: #e99041;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+}
+
+
+/*-------------PARAGRAPHS-------------*/
+
+.long-copy {
+    /*line height should be between 120% and 150% as a standard*/
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+/*select paragrpah only in the box class*/
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/*-------------ICONS-------------*/
+/*icons are fonts basically here so we can use the font properties */
+
+.icon-big {
+    font-size: 350%;
+    /*force icon to line break. So alwasy use display:block*/
+    display: block;
+    color: #e99041;
+    margin-bottom: 10px; 
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    /*Secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align:middle;
+    margin-top: -5px;
+}
+
+/*---------- LINKS ----------*/
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.5s;
+    transition: border-bottom 0.2s, color 0.5s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent; 
+}
+
+
+
+
+/*----------These are BUTTONS code - element comments----------T*/
+
+.btn:link, 
+/*link e.g. a are normal state thats why :link pseudo class*/
+.btn:visited,
+input[type=submit]{ 
+/*link e.g. a are after click e.g. visited state thats why :link pseudo class*/
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    /*this will add animation to all property and color change smoothly in 2 seconds*/
+    -webkit-transition: background-color 2s, border 2s, color 2s;
+    transition: background-color 2s, border 2s, color 2s; 
+    
+}
+
+/*for the not-visited and visited btn links*/
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #e67e22; 
+    /*https://flatuicolors.com/palette/defo will help to pick color flat*/  
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+
+/*for the hover and active btn links*/
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:hover{
+    background-color: #e89b57;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    /*background-color: #e67e22;*/
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+/*------------------------------------*/
+/*Header*/
+/*------------------------------------*/
+
+header {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))),url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero-min.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute; 
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /*translate the width half of the width and half of the height*/
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/*Main - navigation*/
+
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*this will give the 18px font size. because base is 20 px and 18/20 = 0.9 = 90%*/
+    /*never use the px for body element fonts try to stick to the % */
+    font-size: 90%; 
+    /*the bottom border wont be visible until we visit it*/
+    border-bottom: 2px solid transparent;
+    /*add the animation to visible the border in 0.2 second after visit*/
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e99041;
+    
+}
+
+/*mobile navigation*/
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    /*this will show the pointer hand*/
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+.mobile-nav-close {
+    float: right;
+    margin-top: 30px;   
+    cursor: pointer;
+    display: none;
+    font-size: 200%;
+    color: #fff;
+}
+    
+/*Sticky navigation*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
+/*
+    vertical stack and it has highest possible value . to resovle and put sticky 
+    nav alwasy on top of other elements use zindex & assign highest value
+*/
+    z-index: 9999;
+}
+
+.sticky .main-nav {
+    margin-top: 15px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0px;
+    color: #555;
+}
+/*if the "logo" inside the sticky then display it as a block. No longer hidden*/
+.sticky .logo {
+    display: none;
+}
+/*if the "logo-black" inside the sticky then display it as a block. No longer hidden*/
+.sticky .logo-black {
+    display: block;
+}
+/*------------------------------------*/
+/* SECTION 1: section-features*/ 
+/*------------------------------------*/
+
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+/*------------------------------------*/
+/* SECTION 2: meals-showcase*/ 
+/*------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
+.meals-showcase {
+    list-style: none;
+    /*show case ul width*/
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    /* the width is 25% because we want 4 images inside 100% width of the show case.*/
+    width: 25%;
+}
+
+.meal-photo {
+    /*this width 100 means exact 100% of above meals  li i.e. 25% gonna be considered as 100% here*/
+    width: 100%;
+    margin: 0;
+    /*if the image is oveflowing in the container user hidden overflwo*/
+    overflow: hidden;
+    /*behind the image there is a black container added for opacity */
+    background-color: #000;
+}
+
+.meal-photo img{
+    /*70% opacity will help on a image to look like faded*/
+    opacity: 0.7;
+    /*this will make sure the 100% of the container and image will be display 100% inside the container */
+    width: 100%;
+    height: auto;
+    /*images gets bigger than normal initilally*/
+    -webkit-transform: scale(1.15); /*added by the prefixer automatically to support the different browser*/
+    transform: scale(1.15);
+    /*add animation half seconds*/
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meal-photo img:hover {
+    /*after hover opacity goes to normal and image looks brighter*/
+    opacity: 1;
+    /*after hover make the image looks normal*/
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/*------------------------------------*/
+/* SECTION 3: section-steps  - How it works*/ 
+/*------------------------------------*/
+
+
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+/*below pseudo code will select the first of the steps boxes. Which is left one. because there are only 2. left and right*/
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+/*    margin-top: 30px;*/
+}
+
+.steps-box:last-child {
+    text-align: left;
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    /*40% of the left container steps-box*/
+    width: 40%;
+}
+
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+/*select the last of type pseudo code*/
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+/*the below code for the number and circle for li elements*/
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/*------------------------------------*/
+/* SECTION 4: section-cities */ 
+/*------------------------------------*/
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.citi-feature {
+    margin-bottom: 5px;
+}
+
+
+/*------------------------------------*/
+/* SECTION 5: section-testimonials */ 
+/*------------------------------------*/
+
+.section-testimonials  {
+    background-image :-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))),url(img/back-customers-min.jpg);
+    background-image :linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/back-customers-min.jpg);
+    background-size: cover;
+    color: #fff;
+    /*this will help to fix the image and when you scroll the only text over image gets scrolled up*/
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    /*get the code from the css-tricks https://css-tricks.com for quotation mark*/
+    content: "\201C";
+    font-size: 500%; 
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;;  
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /*this will align the text to middle*/
+    vertical-align: middle;
+}
+
+
+
+/*------------------------------------*/
+/* SECTION 6: section-plans */ 
+/*------------------------------------*/
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%; /* 90% + 5% +5% = 100% width alwasy do the math%*/
+    margin-left: 5%;  
+    /* box-shadow: x-axis y-axis blur color */
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
+    
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.plan-box div:last-child {
+    text-align: center;
+    border: none;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span {
+    font-size: 30%; 
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+    
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+
+
+/*------------------------------------*/
+/* SECTION 7 : section-form  SIGN UP */
+/*------------------------------------*/
+
+ /*60 % + 20 px + 20 px = 100% of container for form - always do the math
+    Another way to center the elements*/
+
+.contact-form {
+   
+	width: 90%;
+    margin: 0 auto;
+}
+
+
+input[type=text], /*select only whos type is text*/
+input[type=email], /*select only whos type is email*/
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;  
+}
+
+*:focus{
+    outline: none;
+}
+
+.map-box {
+	width: 100%;
+	height: 560px;
+	position: relative;
+	
+}
+
+.map {
+	width: 100%;
+	height: 560px;
+	position: relative;
+	z-index: 0;
+	
+}
+
+.form-box {
+	/*	position: is relative because we are using the absolute above for the parent class map-box*/
+	position: absolute;
+	width: 50%;
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 10;
+	height: 560px;
+	padding-top: 40px;
+
+}
+
+
+
+
+/*------------------------------------*/
+/* Footer - section */
+/*------------------------------------*/
+
+footer {
+    background-color: #262626;
+    padding: 50px;
+    font-size: 80%;
+}
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float:right;   
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/*to remove the blank space on last li and the end of the row*/
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0px;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.socail-links li a:visited{
+    font-size: 150%;
+}
+
+fb-color,
+twitter-color,
+googleplus-color,
+instagram-color {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+.fb-color:hover { 
+    color: #3b5998;
+}
+
+.twitter-color:hover { 
+    color: #55acee;
+}
+.googleplus-color:hover { 
+    color: #dd4b39;
+}
+.instagram-color:hover { 
+    color: #e95950;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/*------------------------------------*/
+/* Animation effects */
+/*------------------------------------*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+/*hide element before scroll. and once scroll this opacity get to 1 in the jquery animate effect*/
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 .animated{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated{
+    opacity: 1;
+}
