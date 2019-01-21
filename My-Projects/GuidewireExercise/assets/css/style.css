@@ -6,6 +6,7 @@
 */
 
 /*Global Variable declaration */
+
 :root {
 	/*business-styles-variables*/
 	--main-active-color: #255C7D;
@@ -26,7 +27,6 @@
     --main-txt-color: white;	
 	--main-border-radius: 2px;
 	--main-border-offset: 4px;
-	
 	
 	/*consumer-styles-variables*/
 	--main-gradient-dark-blue: #2f7299; /*Change the color for theme change effec*/
@@ -126,13 +126,28 @@
 	cursor: pointer;
 	outline:0;
 	background: var(--main-active-color);
-	font-size: calc(var(--main-font-size) * 1.25);
-	width: calc(var(--main-btn-width) * 2.75);
-	height: calc(var(--main-btn-lg-height) * 1.5);
 	background: -webkit-gradient(linear, left top, right top, from(var(--main-gradient-dark-blue)), to(var(--main-gradient-light-blue)));
 	background: linear-gradient(90deg, var(--main-gradient-dark-blue), var(--main-gradient-light-blue));
 	border:none;
 	border-radius: calc(var(--main-btn-radius) * 1.5);
+}
+
+.consumer-lg{
+	font-size: calc(var(--main-font-size) * 1.25);
+	width: calc(var(--main-btn-width) * 2.75);
+	height: calc(var(--main-btn-lg-height) * 1.5);
+}
+
+.consumer-md{
+	font-size: calc(var(--main-font-size) * 1);
+	width: calc(var(--main-btn-width) * 2);
+	height: calc(var(--main-btn-lg-height) * 1);
+}
+
+.consumer-sm{
+	font-size: calc(var(--main-font-size) * 0.7);
+	width: calc(var(--main-btn-width) * 1.25);
+	height: calc(var(--main-btn-lg-height) * 0.9);
 }
 
 .consumer-primary:enabled {

@@ -4,45 +4,15 @@
 	purpose: gloabal stylesheet
 */
 
-/*variable declaration*/
-
-/*
-:root {
-    --main-bg-color: #00739d;
-	--main-bg-active-color: #005D80;
-	--main-bg-disabled-color: #E9E9E9;
-	--main-disabled-color: #888888;
-	--main-btn-radius: 3px;
-	--main-btn-width: 82px;
-	--main-font-size: 13px;
-	--main-btn-lg-height: 32px;
-	--main-btn-md-height: 25px;
-	--main-btn-sm-height:18px;
-	--main-font-size-sm: 12px;
-	--main-padding: 8px;
-    --main-txt-color: white;	
-	--main-border-radius: 2px;
-	--main-border-offset: 4px;
-}
-*/
-
 /*styles*/
 
 body
 {
-/*
-	padding: 20px;
-	max-width: 700px;
-	width: 80%;
-	margin: 20px auto;
-	font-family: "Montserrat", "Avenir";
-*/
 	margin: 0; /*remove the top padding for the h1*/
 	font-family: "Montserrat", "Avenir"; /*two font side by side if the one doesnt work*/
 }
 
 #container {
-/*	 border: 1px solid  #495388;*/
      max-width: 700px;
      width: 80%;
      margin: 20px auto;
@@ -56,7 +26,6 @@ td {
   	border-collapse: collapse;
 	table-layout: auto; 
 	width: 80%;
-/*	margin-top:20px;*/
 }
 
 
@@ -81,80 +50,3 @@ th,td {
 		margin: 20px auto;
     }
 }
-
-
-
-
-/*
-
-table,
-td,
-th{
-	table-layout: fixed;
-  	width: 100%;
-	border: 1px solid #333;
-  	border-collapse: collapse;
-}
-
-td {
-    border: 1px solid #333;
-	padding: 10px;
-	border: 1px solid;
-}
-
-thead {
-	
-    color: #c02c5a;
-}
-*/
-
-/*
-
-button {
-	font-size: var(--main-font-size);
-}
-
-button:hover,
-button:focus {
-    background: var(--main-bg-color);
-	border: none;
-	border-radius: var(--main-border-radius);
-	color: var(--main-txt-color);
-	cursor: pointer;
-	display: inline-block;
-	padding: var(--main-padding);
-	width: var(--main-btn-width);
-}
-
-button:focus {
-	outline: 1px solid #fff;
-	outline-offset: calc(-1 * var(--main-border-offset));
-}
-
-button:active {
-	background: var(--main-bg-active-color);
-	outline: none;
-}
-
-button:disabled {
-	background: var(--main-bg-disabled-color);
-	color: var(--main-disabled-color);
-	
-}
-
-.btn-lg {
-	height: var(--main-btn-lg-height);
-}
-
-.btn-md {
-	height: var(--main-btn-md-height);
-	line-height: 1px;
-}
-
-.btn-sm {
-	font-size: var(--main-font-size-sm); 
-	height: var(--main-btn-sm-height);
-	--main-border-offset: 2px;
-	line-height: 1px;
-}
-*/
