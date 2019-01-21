@@ -103,6 +103,9 @@
 }
 
 /*Business theme Secondary button*/
+.secondary {
+	background-color: transparent;
+}
 .secondary,
 .secondary:hover,
 .secondary:focus {
