@@ -4,7 +4,7 @@
 	purpose: gloabal stylesheet
 */
 
-/*styles*/
+/*global page styles*/
 
 body
 {
@@ -12,7 +12,7 @@ body
 	font-family: "Montserrat", "Avenir"; /*two font side by side if the one doesnt work*/
 }
 
-#container {
+.container {
      max-width: 700px;
      width: 80%;
      margin: 20px auto;
@@ -45,7 +45,7 @@ th,td {
 }
 
 @media only screen and (max-width: 767px) {
-    #container{
+    .container{
         width:  100%;
 		margin: 20px auto;
     }
