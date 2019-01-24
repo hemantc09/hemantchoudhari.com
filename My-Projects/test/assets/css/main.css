@@ -1,0 +1,52 @@
+/*
+	@author:Hemant Choudhari: hemantc09@gmail.com- www.hemantchoudhari.com	
+	name: main.css
+	purpose: gloabal stylesheet
+*/
+
+/*global page styles*/
+
+body
+{
+	margin: 0; /*remove the top padding for the h1*/
+	font-family: "Montserrat", "Avenir"; /*two font side by side if the one doesnt work*/
+}
+
+.container {
+     max-width: 700px;
+     width: 80%;
+     margin: 20px auto;
+     padding-top: 50px;
+     padding-bottom:50px;
+}
+
+table,
+td {
+	text-align: center;
+  	border-collapse: collapse;
+	table-layout: auto; 
+	width: 80%;
+}
+
+
+th,td {
+	color: #c02c5a;
+	padding: 5px;
+	width: 300px;
+	font-weight:bold;
+}
+
+.pos {
+  text-align:left;
+}
+
+.cons-color {
+	color: black;
+}
+
+@media only screen and (max-width: 767px) {
+    .container{
+        width:  100%;
+		margin: 20px auto;
+    }
+}
