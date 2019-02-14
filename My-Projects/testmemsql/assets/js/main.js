@@ -5,7 +5,7 @@ function checkEmail(str){
 	var re = /\S+@\S+\.\S+/;
     if(!re.test(str)){
 		document.getElementById("BusinessEmail").style.border = "1px solid red";
-		document.getElementById("emailError").innerHTML="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Please make sure this isn’t a personal email address";
+		document.getElementById("emailError").innerHTML="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Please make sure this isn&#39t a personal email address";
 		document.getElementById("emailError").style.fontSize = "14px";
 		return false;
 	}
@@ -24,7 +24,7 @@ function validateForm() {
 	var checked = false;
 	//validate email validation and dispaly error accordingly
   	if (checkEmail(BusinessEmailVal)) {
-		document.getElementById("emailError").innerHTML="Please make sure this isn’t a personal email address";
+		document.getElementById("emailError").innerHTML="Please make sure this isn&#39t a personal email address";
   	}
 	else {
 		
@@ -33,7 +33,7 @@ function validateForm() {
 	//validate the option user selected and display error accordingly
 	if (selectedValue == "selectOption")
    	{
-		document.getElementById("selectError").innerHTML="Please select Option";
+		document.getElementById("selectError").innerHTML="Please select Business size option";
 		document.getElementById("selectError").style.fontSize = "14px";
    	}
 	//if business size greater than 1-10
