@@ -1,0 +1,104 @@
+
+<!--by hemantc09@gmail.com-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>memSQL exercise</title>
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+	<div class="header">
+		<img class="logo" src="assets/img/MemSQL_horizontal_lockup_grey-white_logo.png" alt="marketLogo"/>
+	</div>
+	<div class="container">
+		<div class="logoEclipse">
+			<span class="calendar"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+		</div>
+		<div id="content">
+			<h1 class="h1-BookADdemo" id="mainText"> Book a Demo </h1>
+			<p class="p-secondaryContent">Help us customize your demo by answering the <br> following questions below.</p>
+		</div>
+		
+		<div>
+			<form class="formInput" name="customerForm" id="customerForm" onsubmit="return validateForm()">
+				<label class="labelForInput" for="businessEmail">Business Email</label>
+				<input type="email" placeholder="test@test.com" id="BusinessEmail" name="BusinessEmail"/>
+				<span class="error"><p id="emailError"></p></span>
+				<label class="labelForInput" for="businessSize">Business Size</label>
+				
+				<div class="selectdiv ">
+					<select id="selectSize" >
+						<option value="selectOption">Select option </option>
+						<option value="1"> 1 - 10</option>
+						<option value="2"> 11 - 50</option>
+						<option value="3"> 51 - 100</option>
+						<option value="4"> 101 - 250</option>
+						<option value="5"> 250+ </option>
+					</select>
+				</div>
+				<span class="error"><p id="selectError"></p></span>
+				<span class="error"><p id="solutionError"></p></span>
+				<p class="secondaryText">
+					What is the most important thing to you in a solution?
+				</p>
+				
+				<div>
+					<div class="radioBoxLeft">					
+						<div><input type="radio" id="Real-time Analytics" name="solution" value="Real-time Analytics">
+						<label for="Real-time Analytics">Real-time Analytics</label>
+						</div>
+						
+						<div><input type="radio" id="Query Response Time" name="solution" value="Query Response Time">
+						<label for="Query Response Time">Query Response Time</label>
+						</div>
+						
+						<div>
+						<input type="radio" id="High Concurrency" name="solution" value="High Concurrency">
+						<label for="High Concurrency">High Concurrency</label>	
+						</div>
+						
+						<div>
+						<input type="radio" id="Fast Data Ingest" name="solution" value="Fast Data Ingest">
+						<label for="Fast Data Ingest">Fast Data Ingest</label>	
+						</div>
+						
+					</div>	
+					<div class="radioBoxRight">
+						<div><input type="radio" id="Scalability" name="solution" value="Scalability">
+						<label for="Scalability">Scalability</label>
+						</div>
+						
+						<div>
+						<input type="radio" id="Document storage" name="solution" value="Document storage">
+						<label for="Document storage">Document storage</label>
+						</div>
+						
+						<div>
+						<input type="radio" id="Full text search" name="solution" value="Full text search">
+						<label for="Full text search">Full text search</label>	
+						</div>
+						
+						<div>
+						<input type="radio" id="Price" name="solution" value="Price">
+						<label for="Price">Price</label>	
+						</div>
+					</div>	
+				</div>
+		
+				<button  class="btnSubmit" type="submit" value="submit">
+				Continue to Schedule a Time
+ 					<i class="fa fa-arrow-right"></i> 
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>	
+</body>
+</html>
