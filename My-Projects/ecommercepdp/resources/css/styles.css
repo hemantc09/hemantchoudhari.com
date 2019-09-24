@@ -1,0 +1,397 @@
+/*
+Author: Hemant Choudhari
+file: styles.css
+*/
+
+/*-------------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+	color: #6A6A6A;
+	font-family: 'Montserrat', 'Arial', 'sans-serif';
+	font-weight: 300;
+/*consider setup font size 20px*/
+	font-size: 20px; 
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+}
+
+
+/*-------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-------------------------------------------------*/
+/*centered row */
+.row {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+
+
+/*----------------header and p tags----------------*/
+
+h1,
+h5 {
+	margin: 0;
+	color: #353535;
+}
+
+h1 {
+/*	210% which is 42px relative to base size 20px*/
+	font-size: 210%;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+h5 {
+	font-size: 110%;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+p {
+	font-size: 75%;
+}
+
+
+/*----------------BUTTONS----------------*/
+.btn:link,
+.btn:visited {
+	border: 2px solid #4B6DE7;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 80%;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color 0.2s;
+	letter-spacing: 2px;
+	margin-right: 20px;
+	line-height: 65px;
+	height: 70px;
+	vertical-align: middle;
+	width: 229px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: #4B6DE7;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	background-color: #4B6DE7;
+	color: #FFFFFF
+}
+
+.btn:hover,
+.btn:active {
+	background: #A5B6F3;	
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: #4B6DE7;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	background-color: #7892ED;
+	color: #FFFFFF
+}
+
+
+
+/*-------------------------------------------------*/
+/*MAIN NAV COMPONENTS*/
+/*-------------------------------------------------*/
+
+/*main nav full length row*/
+nav-row {
+	max-width: 100%;
+	background-color: #212222;
+	height: 90px;
+}
+
+
+header {
+	
+}
+
+.logo {
+	height: 100%;
+	width: auto;
+	float: left;
+}
+
+
+/*sticky navigation*/
+.sticky {
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #212222;
+}
+
+
+.sticky .main-nav {
+	float: left; 
+	list-style: none;
+	margin-top: 33px;
+}
+
+.sticky .main-nav li {
+	display: inline-block;
+	margin-left: 50px;
+	
+}
+
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+	display: inline-block;
+	color: #D9D9D9;
+	text-decoration: none;
+	text-transform: uppercase;
+/*	15px = 75% of base size 20px*/
+	font-size: 75%;
+	letter-spacing: 4px;
+	font-weight: 600;
+	border-bottom:2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+	border-bottom: 12px solid #D9D9D9;
+}
+
+/*mobile navigation*/
+.mobile-nav-icon {
+	position: relative;
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+	padding-left: 50px;
+}
+.mobile-nav-icon ion-icon { 
+	position: absolute;
+	left: 30px;
+	font-size: 200%;
+	color: #D9D9D9;
+}
+
+
+/*mobile navigation*/
+.search-nav-icon {
+	position: relative;
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	padding-left: 50px;
+}
+.search-nav-icon ion-icon { 
+	position: absolute;
+	left: 30px;
+	font-size: 200%;
+	color: #D9D9D9;
+}
+
+
+
+
+/*-------------------------------------------------*/
+/*Product section COMPONENTS*/
+/*-------------------------------------------------*/
+
+/*----------------left product show----------------*/
+
+.product-box {
+	margin: 0;
+ 	float: left;
+  	width: 50%;
+  	padding: 4%;
+}
+
+.product-box:last-child {
+	padding: 4%;
+	background-color:#F9F9F9;
+}
+.product-img-main {
+	margin-top: 100px;
+	width: 391px;
+	height: 448px;
+	left: 168px;
+	top: 260px;
+	padding-left: 50px;
+}
+
+.subproduct-nav-link a {
+	font-size: 75%;
+	color: #6A6A6A;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.product-img-container {
+	margin-top: 50px;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	border: 1px solid #CBCBCB;
+	display: inline-block;
+	background-color: #FFFFFF;
+}
+
+.product-img-container:hover img {
+	opacity: 0.5;
+}
+
+.product-img-options {
+	width: 44px;
+	height: 50px;
+	margin: 10px;
+}
+
+
+/*----------------Right product show----------------*/
+
+
+.section-category {
+	margin-top: 50px;
+	font-size: 80%;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+
+}
+
+.section-category  h1{
+	color: red
+}
+
+.price {
+	margin-top: 23px;
+}
+
+.category-name {
+	margin-top: 20px;
+}
+
+.ratings {
+	margin-top: 30px;
+}
+
+.complete-star {
+	color: #0E1111;
+}
+.blank-star {
+	color: #C4C4C4;
+}
+
+.product-information {
+	padding: 1% auto;
+	margin-top: 20px;
+	color: #6A6A6A;
+}
+
+hr {
+	margin-top: 20px;
+}
+
+.select-color {
+	margin-top: 20px;
+	font-size: 60%;
+	font-weight: 600;
+	letter-spacing: 3px;
+	color: #6A6A6A;
+	text-transform: uppercase;
+}
+
+.product-img-multicolor {
+	margin-top: 10px;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB;
+	display: inline-block;
+}
+
+.product-img-multicolor:hover img {
+	opacity: 0.5;
+}
+
+div > .product-img-multicolor:nth-child(1) img {
+	content: url(/resources/img/tshirt-pink.svg);
+}
+
+div > .product-img-multicolor:nth-child(2) img {
+	content: url(/resources/img/tshirt-green.svg);
+}
+
+div > .product-img-multicolor:nth-child(3) img {
+	content: url(/resources/img/tshirt-darkgreen.svg);
+}
+
+
+div > .product-img-multicolor:nth-child(4) img {
+	content: url(/resources/img/tshirt-orange.svg);
+}
+
+.product-img-container {
+	display: inline-block;
+	text-align: center;
+}
+
+.select-size {
+	display: inline-block;
+	margin-top: 20px;
+	height: 70px;
+	width: 70px;
+	border: 1px solid #CBCBCB;
+	text-align: center;
+	background: #FFFFFF;
+}
+
+.select-size a:link,
+.select-size a:visited {
+	font-weight: 600;
+	font-size: 90%;
+	text-transform: uppercase;
+	color: #6A6A6A;
+	vertical-align: middle;
+	line-height: 65px;
+	text-decoration: none;
+	font-weight: 600px;
+}
+
+.select-size:hover,
+.select-size a:hover {
+	background: #EBEBEB;
+}
+
+.checkout-btns {
+	margin-top: 20px;
+}
+
+.checkout-btns p {
+	position: relative;
+	margin-top: 20px;
+}
+
+.checkout-btns p span {
+	position: absolute;
+	padding: 0 10px;
+	color: #4B6DE7;
+}

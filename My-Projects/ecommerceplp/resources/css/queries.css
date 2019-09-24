@@ -1,0 +1,174 @@
+
+
+/*big tablet to 1500px - width smaller than nav row 1440px*/
+@media only screen and (max-width: 2400px) {
+	.row {
+		padding: 0 2%;
+	}
+	
+	body {
+	}
+	
+	.btn:link,
+	.btn:visited {
+		margin-top: 10px;
+	}
+	
+	.col {
+		margin-top: 10px;
+	}
+	
+	/*fix for grid*/
+	.col:nth-of-type(1n) {
+		margin-left: 10px;
+	}
+}
+
+
+
+/*small tablet to big tablet 768px to 1023px*/
+@media only screen and (max-width: 1023px) {
+	body {
+		font-size: 18px;
+	}
+	
+	.product-box {
+		width: 100%;
+	}
+	
+	.sticky .main-nav {
+		display: none;
+	}
+	
+	.sticky .mobile-nav-icon {
+		display: inline-block;
+	}
+	
+	.sticky .search-nav-icon {
+		display: inline-block;
+	}
+	
+	.sticky .main-nav li  {
+		display: block;
+		width: 100%;
+	}
+	
+	.sticky .main-nav li a:link,
+	.sticky .main-nav li a:visited {
+		display: block;
+		border: 0;
+		padding: 15px 0;
+	}
+	
+	.btn:link,
+	.btn:visited {
+
+		text-align: center;
+	}
+	.col {
+		margin-top: 10px;
+		width: 40%;
+	}
+	
+	
+}
+
+
+
+/*small phones to small tablets 481 to 767 px*/
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 16px;	
+	}
+	
+	.row {
+		padding: 0 4%;
+	}
+	
+	h1 {
+		font-size: 180%;
+	}
+
+
+	
+	.main-nav {
+		float: left;
+	}
+	
+	.main-nav li {
+		display: block;
+	}
+
+	
+	.btn:link,
+	.btn:visited {
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	
+	.product-refine {
+	background-color: white;
+	width: 100%;
+	}
+	
+	.product-listings {
+	text-align: center;
+	width: 100%;
+	margin: 0auto;
+		
+	}
+	
+	.row .subproduct-nav-link {
+		margin-top: 20px;
+	}
+	.singleproductbox img {
+		height: 50%;
+		width: 50%;
+	}
+	
+	.single-product-display {
+		text-align: left;
+	}
+	
+}
+
+
+/*small phone 0 to 480px*/
+@media only screen and (max-width: 480px) {
+	body {
+	}
+	
+	.btn:link,
+	.btn:visited {
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	
+	.product-listings {
+	width: 100%;
+	}
+	
+	
+	.product-refine {
+	background-color: white;
+	width: 100%;
+	}
+	
+	.main-nav li {
+		display: block;
+		margin-left: 50px;
+	}
+
+	.refine-results  h5{
+		display: none;
+	}
+	
+	.filters-and-results {
+		display: block;
+	}
+	
+}

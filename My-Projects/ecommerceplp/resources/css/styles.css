@@ -1,0 +1,454 @@
+/*
+Author: Hemant Choudhari
+file: styles.css
+*/
+
+/*-------------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+	color: #6A6A6A;
+	font-family: 'Montserrat', 'Arial', 'sans-serif';
+	font-weight: 300;
+/*consider setup font size 20px*/
+	font-size: 20px; 
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+}
+
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*-------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-------------------------------------------------*/
+/*centered row */
+.row {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/*----------------header and p tags----------------*/
+
+h1,
+h5 {
+	margin: 0;
+	color: #353535;
+}
+
+h1 {
+/*	210% which is 42px relative to base size 20px*/
+	font-size: 210%;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+h5 {
+	font-size: 110%;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+p {
+	font-size: 70%;
+}
+
+
+/*----------------BUTTONS----------------*/
+.btn:link,
+.btn:visited {
+	border: 2px solid #4B6DE7;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 80%;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color 0.2s;
+	letter-spacing: 2px;
+	margin-right: 20px;
+	line-height: 65px;
+	height: 70px;
+	vertical-align: middle;
+	width: 229px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: #4B6DE7;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	background-color: #4B6DE7;
+	color: #FFFFFF
+}
+
+.btn:hover,
+.btn:active {
+	background: #A5B6F3;	
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: #4B6DE7;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	background-color: #7892ED;
+	color: #FFFFFF
+}
+
+.boldMe {
+	font-weight: 600;
+}
+
+/*-------------------------------------------------*/
+/*MAIN NAV COMPONENTS*/
+/*-------------------------------------------------*/
+
+/*main nav full length row*/
+nav-row {
+	max-width: 100%;
+	background-color: #212222;
+	height: 90px;
+}
+
+
+header {
+	
+}
+
+.logo {
+	height: 100%;
+	width: auto;
+	float: left;
+}
+
+
+/*sticky navigation*/
+.sticky {
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #212222;
+}
+
+
+.sticky .main-nav {
+	float: left; 
+	list-style: none;
+	margin-top: 33px;
+}
+
+.sticky .main-nav li {
+	display: inline-block;
+	margin-left: 50px;
+	
+}
+
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+	display: inline-block;
+	color: #D9D9D9;
+	text-decoration: none;
+	text-transform: uppercase;
+/*	15px = 75% of base size 20px*/
+	font-size: 75%;
+	letter-spacing: 4px;
+	font-weight: 600;
+	border-bottom:2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+	border-bottom: 12px solid #D9D9D9;
+}
+
+/*mobile navigation*/
+.mobile-nav-icon {
+	position: relative;
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+	padding-left: 50px;
+}
+.mobile-nav-icon ion-icon { 
+	position: absolute;
+	left: 30px;
+	font-size: 200%;
+	color: #D9D9D9;
+}
+
+
+/*mobile navigation*/
+.search-nav-icon {
+	position: relative;
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	padding-left: 50px;
+}
+.search-nav-icon ion-icon { 
+	position: absolute;
+	left: 30px;
+	font-size: 200%;
+	color: #D9D9D9;
+}
+
+
+/*========================================================================================*/
+/*========================================================================================*/
+/*-------------------------------------------------*/
+/*Product listing COMPONENTS*/
+/*-------------------------------------------------*/
+/*----------------leftn product refine results section----------------*/
+
+
+.product-refine {
+	background-color: white;
+	width: 22%;
+	float: left;
+}
+
+
+.refine-nav {
+	list-style: none;
+	margin-top: 33px;
+	display: block;
+	margin: 0;
+}
+
+.refine-nav ol li {
+	list-style: none;
+}
+
+
+.refine-nav > li {
+	background-color: white;
+}
+
+.refine-nav  li a:link,
+.refine-nav  li a:visited{
+	text-decoration: none;
+	color: #353535;
+}
+
+.refine-nav  li a:link,
+.refine-nav  li a:visited{
+	text-decoration: none;
+	color: #353535;
+}
+
+
+.refine-nav  li  .select-category a:link,
+.refine-nav  li  .select-category a:visited {
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+.refine-nav  li  ol a:link,
+.refine-nav  li  ol a:visited {
+	display: block;
+	text-decoration: underline;
+	padding: 15px;
+	color: #0E1111;
+	font-weight: 400;
+}
+
+
+.refine-nav li .select-category a {
+	text-transform: uppercase;
+}
+
+
+.filters-and-results {
+	display: none;
+}
+
+
+.row .subproduct-nav-link {
+	margin-top: 50px;
+}
+
+.subproduct-nav-link a {
+	font-size: 75%;
+	color: #6A6A6A;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+
+.category-name {
+	margin-top: 20px;
+}
+
+.product-information-text {
+	margin-top: 20px;
+}
+.refine-results {
+	margin: 0;
+}
+.refine-results h5 {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+	margin-top: 50px;
+}
+
+.refine-results > ul > li{
+	margin: 0 auto;
+	border: 1px solid #DDDDDD;
+	padding: 20px;
+	background-color: #F5F5F5;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 65%;
+}
+
+
+/*----------------Right  product listing results section----------------*/
+.product-listings {
+	width: 75%;
+	float: right;
+}
+
+.filters-and-inputs {
+	line-height: 50px;
+	display: inline-block;
+	width: 100%;
+}
+
+.filterLabel {
+	padding: 5px;
+	line-height:20px;
+	margin-right: 10px;
+	float: left;
+	font-size: 80%;
+	border: 1px solid #353535;
+	text-transform: uppercase;
+}
+
+
+.filterInput {
+	font-size: 80%;
+	padding: 10px;
+	float: right;
+	border: 1px solid #353535;
+}
+
+.singleproductbox {
+	border: 1px solid #DDDDDD;
+	margin-right: 10px;
+	margin: 2% auto;
+	
+}
+
+
+.like-icon-wrapper {
+	line-height: 20px;
+}
+
+.singleproductbox ion-icon {
+	display: block;
+	float: right;
+	font-size: 80%;
+	font-weight: 600;
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #353535;
+}
+
+.singleproductbox img {
+	margin-left: auto;
+  	margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+  	display: block;
+	width: 168px;
+	height: 192px;
+}
+
+
+.single-product-name {
+	margin: 10px;
+	font-weight: 600;
+	font-size: 80%;
+	color: #353535;
+}
+
+.single-product-details {
+	margin: 10px;
+	font-weight: 400;
+	font-size: 65%;
+	color: #6A6A6A;
+}
+
+.single-product-price {
+	margin-left: 10px;
+	font-weight: 500;
+	font-size: 80%;
+	color: #353535;
+}
+
+.single-product-display {
+	margin-top: 50px;
+	background-color: #F9F9F9;
+	border-top: 1px solid #DDDDDD;
+	padding-bottom: 20px;
+}
+
+strike {
+	display: inline-block;
+	font-weight: 300;
+	padding-right: 10px;
+}
+
+.footer-navigation {
+	float: right;
+	line-height: 20px;
+	margin-bottom: 20px;
+	margin-right: 50px;
+	
+}
+.footer-navigation a:link,
+.footer-navigation a:visited{
+	padding: 10px;
+	float: left;
+	color: #353535;
+	font-size: 60%;
+}
+
+
+.footer-navigation a:hover{
+	border: 1px solid #353535;
+}
+
+
+.footer-navigation a:first-child,
+.footer-navigation a:nth-child(2) {
+	color: rgba(221,221,221, 0.9);
+}
